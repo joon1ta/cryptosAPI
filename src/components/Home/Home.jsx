@@ -1,10 +1,10 @@
 import React from 'react'
 import CardsContainer from '../CardsContainer/CardsContainer'
 
-const Home = () => {
+const Home = ({coins}) => {
     return (
         <div>
-            <CardsContainer />
+            <CardsContainer coins={coins} />
         </div>
     )
 }
