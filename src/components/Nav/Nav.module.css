@@ -1,5 +1,10 @@
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     list-style: none;
+    height: 60px;
+    background-color: grey;
+    margin-bottom: 20px;
 }
+

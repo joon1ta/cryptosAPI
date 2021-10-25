@@ -1,13 +1,21 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import styles from './Nav.module.css'
+import Search from '../Search/Search'
+
+export function Nav({filter}) {
+
+    
+
+   
 
 
-export function Nav() {
     return (
         <nav >
             <ul className={styles.nav}>
-                <li>Home</li>
-                <li>Search</li>
+                <Link to='/'>Home</Link>
+                <Search filter={filter} />
+                <Link to='/form'>Form</Link>
                 <li>Mercado</li>
             </ul>
         </nav>

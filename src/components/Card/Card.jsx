@@ -3,10 +3,15 @@ import styles from './Card.module.css'
 function Card({id,name,price,symbol,img}) {
     return (
         <div className={styles.cardsContainer}>
-            <h2>Nombre: {name}</h2>
-            <p>Price: ${Math.ceil(price)}</p>
+            <div className={styles.cardsTitle}>
+               <img src={img} width="100" alt=''></img> 
+               <h2 className={styles.h2Container}>Nombre: <span className={styles.spanContainer}>{name}</span></h2>
+            </div>
+            
+           
+            <p>Price:  ${Math.ceil(price)}</p>
             <p>Symbol: {symbol}</p>
-            <img src={img} width="100" alt=''></img>
+            
         </div>
     )
 }

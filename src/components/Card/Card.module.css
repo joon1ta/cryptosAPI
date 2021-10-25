@@ -1,3 +1,19 @@
+
+
 .cardsContainer {
     border: 1px solid black;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.h2Container {
+    color: orange;
+}
+
+.spanContainer {
+    color: black;
+}
+
+.cardsTitle {
+    border-bottom: 1px solid black;
 }

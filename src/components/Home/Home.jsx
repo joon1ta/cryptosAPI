@@ -1,10 +1,18 @@
 import React from 'react'
 import CardsContainer from '../CardsContainer/CardsContainer'
+import styles from './Home.module.css'
 
-const Home = ({coins}) => {
+const Home = ({coins, allCoins}) => {
+
+const handleClick = () => {
+    allCoins()
+}
+
     return (
-        <div>
+        <div className={styles.homeContainer}>
+            <button onClick={handleClick}>All coins</button>
             <CardsContainer coins={coins} />
+          
         </div>
     )
 }
