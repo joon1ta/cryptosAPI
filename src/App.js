@@ -3,6 +3,7 @@ import {Nav} from './components/Nav/Nav'
 //import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home'
 import Form from './components/Form/Form'
+import CoinDetails from './components/CoinDetails/CoinDetails'
 import {useState, useEffect} from 'react';
 import {Route} from 'react-router-dom';
 import axios from 'axios';
@@ -43,7 +44,7 @@ const filterCoins = (input) => {
         <Nav filter={filterCoins} />
         <Route exact path='/'><Home coins={realCoins} allCoins={allCoins}  /></Route>
         <Route path='/form'><Form /></Route>
-        
+        <Route exact path='/detail/:id'><CoinDetails /></Route>
 
 
        
