@@ -1,16 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import CardsContainer from '../CardsContainer/CardsContainer'
 import styles from './Home.module.css'
+import {useSelector,useDispatch} from 'react-redux'
+import {getCoins} from '../../redux/actions/index'
+const Home = () => {
 
-const Home = ({coins, allCoins}) => {
+const coins = useSelector(state => state.coins)
+const dispatch = useDispatch()
 
-const handleClick = () => {
-    allCoins()
-}
+useEffect(() => {
+   dispatch(getCoins())
+}, [dispatch])
+
+
 
     return (
         <div className={styles.homeContainer}>
-            <button onClick={handleClick}>All coins</button>
+            <button>All coins</button>
             <CardsContainer coins={coins} />
           
         </div>

@@ -1,9 +1,21 @@
 
 
 .cardsContainer {
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,0.75);
     text-align: center;
     margin-bottom: 5px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+.cardsContainer:hover {
+    transform: scale(1.08);
+    transition: all ease .5s;
+    background-color: rgba(26, 25, 25, 0.281);
+}
+.cardsContainer img {
+    margin-top: 15px;
 }
 
 .h2Container {
@@ -16,4 +28,8 @@
 
 .cardsTitle {
     border-bottom: 1px solid black;
+}
+
+a {
+    text-decoration: none;
 }
